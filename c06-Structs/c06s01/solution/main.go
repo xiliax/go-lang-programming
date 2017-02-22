@@ -17,7 +17,7 @@ type Person struct {
 
 func main() {
 	// TODO - create a slice of Person containing 3 persons
-	var people []Person
+	var people []Person // nil slice
 	var p Person
 	p = Person{"Mary", 35, "011-13-4567",
 		"1 First St", "", "Brooklyn", "NY", "11212",
