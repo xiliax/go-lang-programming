@@ -6,16 +6,18 @@ import (
 )
 
 func main() {
-	var later = time.After((1 / 10) * time.Nanosecond)
+	fmt.Println("Ch. 7 - Channels - Review")
+	c := time.After(1 * time.Nanosecond)
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 140; i++ {
 
 		select {
-		case <-later:
-			fmt.Printf("Timer expired after 1ns\n")
+		case v := <-c:
+			fmt.Println("Odd", v)
+			break
 
 		default:
-			fmt.Println("I am the default")
+			fmt.Println("No more values")
 		}
 	}
 }
