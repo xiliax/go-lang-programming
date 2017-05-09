@@ -1,0 +1,3 @@
+Hello, World!
+It is a wonderful day!
+I love Go Language!
