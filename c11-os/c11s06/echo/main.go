@@ -5,30 +5,31 @@ import (
 	"os"
 )
 
-var printNewLine = "\n"
+/*
+echo -- write arguments to the standard output
 
-/* The echo utility writes any specified operands, separated by single blank
-   (` ') characters and followed by a newline (`\n') character, to the stan-
-   dard output.
+The echo utility writes any specified operands, separated by single blank (` ')
+characters and followed by a newline (`\n') character, to the standard output.
 
-   -n    Do not print the trailing newline character.
+     The following option is available:
+
+     -n    Do not print the trailing newline character.
 */
+
+var lastChar = "\n" // defaults to a \n, unless -n is specified
 func main() {
-	if 1 == len(os.Args) {
-		fmt.Println("")
-		return
-	}
-	offset := 1 // skip program name
-	if "-n" == os.Args[1] {
-		printNewLine = ""
-		offset++ // skip -n option
+	// skip over program name and possible -n option
+	offset := 1 // skips program name
+	if 2 <= len(os.Args) && "-n" == os.Args[offset] {
+		lastChar = ""
+		// if we are in here, we need to skip -n option
+		offset++
 	}
 
-	outputSep := ""
+	// write each remaining args to output with ' ' between them
 	for _, a := range os.Args[offset:] {
-		fmt.Printf("%v%v", outputSep, a)
-		outputSep = " "
+		fmt.Print(a, " ")
 	}
 
-	fmt.Print(printNewLine)
+	fmt.Print(lastChar)
 }
