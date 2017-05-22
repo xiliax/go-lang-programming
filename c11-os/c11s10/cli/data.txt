@@ -1,0 +1,3 @@
+Hello, this is line 1 using io.WriteString
+This is line 2, using *File.WriteString
+This is line 3 using bytes
