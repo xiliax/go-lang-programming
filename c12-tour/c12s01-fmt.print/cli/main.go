@@ -1,6 +1,6 @@
 package main
 
-import "github.com/another/c12-fmt/c12s01/f"
+import "github.com/another/c12-tour/c12s01-fmt.print/f"
 
 func main() {
 	f.Println("Introduction to fmt")
