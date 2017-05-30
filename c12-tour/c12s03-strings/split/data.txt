@@ -1,0 +1,6 @@
+name,age,Height
+Jane 35 6.3
+Mary 15 4.8
+Mark 21 5.3
+Joe 75 5.7
+Sue 7 4.0

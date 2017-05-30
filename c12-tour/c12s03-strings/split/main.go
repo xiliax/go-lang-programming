@@ -15,7 +15,7 @@ type Person struct {
 }
 
 func main() {
-	fmt.Println("Using Package stirngs")
+	fmt.Println("Using strings.Split,Title")
 
 	f, err := os.Open("data.txt")
 	if nil != err {
@@ -25,42 +25,46 @@ func main() {
 
 	header, err := getHeader(f)
 	if nil != err {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 
-	fmt.Printf("%-15s %-4s %-8s\n", header[0], header[1], header[2])
+	fmt.Printf("%-15s %4s %8s\n",
+		strings.Title(header[0]), strings.Title(header[1]),
+		strings.Title(header[2]))
 
 	var p *Person
 	for nil == err {
 		p, err = getRow(f)
-		if nil != p {
-			fmt.Printf("%-15s %-4d %-8.1f\n", p.name, p.age, p.height)
+
+		if err == io.EOF {
+			return
 		}
+
+		if nil != err {
+			log.Fatalf("Error reading row: %v\n", err)
+		}
+
+		fmt.Printf("%-15v %4v %8.1f\n", p.name, p.age, p.height)
 	}
 }
-
 func getRow(r io.Reader) (p *Person, err error) {
-	var n int
 	var name string
 	var age int
 	var height float64
 
-	n, err = fmt.Fscanln(r, &name, &age, &height)
-	if n != 3 {
-		return nil, err
+	_, err = fmt.Fscanln(r, &name, &age, &height)
+
+	if nil != err {
+		return
 	}
 
-	if nil != err && err != io.EOF {
-		return nil, err
-	}
 	p = &Person{name: name, age: age, height: height}
 	return
 }
 
 func getHeader(r io.Reader) (header []string, err error) {
 	var input string
-	n, err := fmt.Fscanf(r, "%s\n", &input)
-	fmt.Println(n, input)
+	_, err = fmt.Fscanln(r, &input)
 	if nil != err {
 		return
 	}

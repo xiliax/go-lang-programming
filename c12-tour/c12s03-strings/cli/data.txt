@@ -1,5 +1,0 @@
-Full Name, Age, Height
-Jane 35 6.3
-Mary 15 4.8
-Mark 75 4.7
-Joe  21 6.2
