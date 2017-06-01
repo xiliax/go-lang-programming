@@ -16,7 +16,7 @@ type Person struct {
 func main() {
 	fmt.Println("Using bufio standard package")
 
-	linesCh := readFile("data.txt")
+	linesCh := readFile("data.csv")
 
 	header := getHeader(linesCh)
 
