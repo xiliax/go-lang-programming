@@ -1,0 +1,40 @@
+  <Person>
+    <Name>Jane Doe</Name>
+    <Age>35</Age>
+    <Height>6.3</Height>
+  </Person>
+  <Person>
+    <Name>Mary Smith</Name>
+    <Age>15</Age>
+    <Height>4.8</Height>
+  </Person>
+  <Person>
+    <Name>Bad</Name>
+    <Age>0</Age>
+    <Height>0</Height>
+  </Person>
+  <Person>
+    <Name>Bad 2</Name>
+    <Age>20</Age>
+    <Height>0</Height>
+  </Person>
+  <Person>
+    <Name>Other</Name>
+    <Age>20</Age>
+    <Height>4.7</Height>
+  </Person>
+  <Person>
+    <Name>Mark Twain</Name>
+    <Age>21</Age>
+    <Height>5.3</Height>
+  </Person>
+  <Person>
+    <Name>Joe Smith</Name>
+    <Age>75</Age>
+    <Height>5.7</Height>
+  </Person>
+  <Person>
+    <Name>Sue-Anne</Name>
+    <Age>7</Age>
+    <Height>4</Height>
+  </Person>
