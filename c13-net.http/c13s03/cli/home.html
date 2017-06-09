@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>You are on my home page</h1>
+    <p>
+        Things about me:
+        <ul>
+            {{ range .FavoriteItems }}
+            <li>{{.}}</li>
+            {{ end }}
+        </ul>
+    </p>
+</body>
+
+</html>
