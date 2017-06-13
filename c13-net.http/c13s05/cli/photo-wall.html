@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Photo Wall</title>
+    <link href="/static/css/photos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Photos</h1>
+    <p>
+        <table>
+            <tbody>
+                {{ range .Photos }}
+                <tr>
+                    <td>
+                        <img src="{{.Url}}" width="200px" />
+                    </td>
+                    <td>
+                        <p><b>Date:</b> {{.Date}}</p>
+
+                        <p><b>Notes:</b>
+                            <ul>
+                                {{range .Notes}}
+                                <li>{{.}}</li>
+                                {{end}}
+                            </ul>
+                        </p>
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </p>
+</body>
+
+</html>
