@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo">Welcome</a>
+        <a href="/home" class="button">Home</a>
+        <a href="/photos" class="button">Photos</a>
+        <span>|</span>
+        <button>About</button>
+        <a href="#" role="button">Contact</a>
+    </header>
+    <h1>You are on my home page</h1>
+    <p>
+        Things about me:
+        <ul>
+            {{ range .FavoriteItems }}
+            <li>{{.}}</li>
+            {{ end }}
+        </ul>
+    </p>
+    <footer>
+        <p>&copy; 2017 Striversity | <a href="#">About</a> | <a href="#">Terms of use</a></p>
+    </footer>
+</body>
+
+</html>

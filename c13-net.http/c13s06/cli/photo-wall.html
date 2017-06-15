@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photo Wall</title>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo">Welcome</a>
+        <a href="/home" class="button">Home</a>
+        <a href="/photos" class="button">Photos</a>
+        <span>|</span>
+        <button>About</button>
+        <a href="#" role="button">Contact</a>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-md-offset-4">
+                <h1>Photos</h1>
+            </div>
+        </div>
+
+        {{ range .Photos }}
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-8">
+                <img src="{{.Url}}" />
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <b>Date:</b> {{.Date}}
+                <p><b>Notes:</b>
+                    <ul>
+                        {{range .Notes}}
+                        <li>{{.}}</li>
+                        {{end}}
+                    </ul>
+                </p>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <footer>
+        <p>&copy; 2017 Striversity | <a href="#">About</a> | <a href="#">Terms of use</a></p>
+    </footer>
+</body>
+
+</html>
