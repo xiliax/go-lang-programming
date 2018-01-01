@@ -1,4 +1,4 @@
-// Demonstrate using arrays to hold a collection values (of the same)
+// Demonstrate using arrays to hold a collection values (of the same type)
 package main
 
 import (
@@ -27,5 +27,4 @@ func printTestResults() {
 	fmt.Printf("Lower Array: %#v\n", s0)
 	fmt.Printf("Upper Array: %#v\n", s1)
 	fmt.Printf("Length s0: %#v\n", len(s0))
-
 }

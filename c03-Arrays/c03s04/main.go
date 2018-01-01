@@ -1,4 +1,3 @@
-// Demonstrate using arrays to hold a collection values (of the same)
 package main
 
 import (

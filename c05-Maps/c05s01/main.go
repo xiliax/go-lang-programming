@@ -24,5 +24,4 @@ func main() {
 	fmt.Println(m4)
 	day := "Thursday"
 	fmt.Println(day, "=>", m5[day])
-
 }

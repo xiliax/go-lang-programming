@@ -1,5 +1,5 @@
-/* hello is a simple Go program */
 package main
+// hello is a simple Go program
 
 import "fmt"
 

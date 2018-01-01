@@ -6,7 +6,7 @@ func main() {
 	var buffer *byte
 	var pBuffer = &buffer
 	var message = "Some very long message"
-	var pMessage = &message
+	var pMessage = &message // where is the very long message in memory?
 	var isLoggingEnabled = true
 	var pLoggingEnabled = &isLoggingEnabled
 
